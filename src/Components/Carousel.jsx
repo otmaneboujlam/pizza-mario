@@ -4,7 +4,6 @@ import loadingGif from "../assets/Loading.gif";
 
 function Carousel() {
   const { topThree, loading } = useContext(RecipeContext);
-  console.log(loading);
 
   return (
     <>
@@ -13,7 +12,12 @@ function Carousel() {
           <img src={loadingGif} alt="" />
         </div>
       ) : (
-        <div id="demo" className="carousel slide" data-bs-ride="carousel">
+        <div
+          id="demo"
+          className="carousel slide"
+          data-bs-ride="carousel"
+          style={{ width: "75%", marginLeft: "auto", marginRight: "auto" }}
+        >
           <div className="carousel-indicators">
             <button
               type="button"

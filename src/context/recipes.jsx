@@ -6,6 +6,7 @@ export const RecipeProvider = ({ children }) => {
   const [recipes, setRecipes] = useState([]);
   const [topThree, setTopThree] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [topThreeEasy, setTopThreeEasy] = useState([]);
 
   useEffect(() => {
     fetch("https://dummyjson.com/recipes")
@@ -26,8 +27,15 @@ export const RecipeProvider = ({ children }) => {
     }
   }, [recipes]);
 
+  useEffect(() => {
+    const allData = [...recipes].filter((r) => r.difficulty == "Easy");
+    setTopThreeEasy(allData.slice(0, 3));
+  }, [recipes]);
+
   return (
-    <RecipeContext.Provider value={{ topThree, loading }}>
+    <RecipeContext.Provider
+      value={{ topThree, loading, topThreeEasy, recipes }}
+    >
       {children}
     </RecipeContext.Provider>
   );
