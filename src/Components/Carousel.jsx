@@ -48,6 +48,15 @@ function Carousel() {
               <div className="carousel-caption">
                 <h3>{topThree[0].name}</h3>
                 <p>Note : {topThree[0].rating}</p>
+                <button
+                  onClick={() =>
+                    window.alert(`Vous avez commandé : ${topThree[0].name}`)
+                  }
+                  type="button"
+                  className="btn btn-sm btn-info"
+                >
+                  Commander
+                </button>
               </div>
             </div>
             <div className="carousel-item">
@@ -60,6 +69,15 @@ function Carousel() {
               <div className="carousel-caption">
                 <h3>{topThree[1].name}</h3>
                 <p>Note : {topThree[1].rating}</p>
+                <button
+                  onClick={() =>
+                    window.alert(`Vous avez commandé : ${topThree[1].name}`)
+                  }
+                  type="button"
+                  className="btn btn-sm btn-info"
+                >
+                  Commander
+                </button>
               </div>
             </div>
             <div className="carousel-item">
@@ -72,6 +90,15 @@ function Carousel() {
               <div className="carousel-caption">
                 <h3>{topThree[2].name}</h3>
                 <p>Note : {topThree[2].rating}</p>
+                <button
+                  onClick={() =>
+                    window.alert(`Vous avez commandé : ${topThree[2].name}`)
+                  }
+                  type="button"
+                  className="btn btn-sm btn-info"
+                >
+                  Commander
+                </button>
               </div>
             </div>
           </div>

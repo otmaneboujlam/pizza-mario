@@ -12,7 +12,7 @@ function Card({ pizza }) {
         <button
           onClick={() => window.alert(`Vous avez commandé : ${pizza.name}`)}
           type="button"
-          className=" btn btn-sm btn-outline-info"
+          className="btn btn-sm btn-outline-info"
         >
           Commander
         </button>
