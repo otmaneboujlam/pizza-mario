@@ -3,7 +3,7 @@ import { RecipeContext } from "../context/recipes";
 import loadingGif from "../assets/Loading.gif";
 
 function Carousel() {
-  const { topThree, loading } = useContext(RecipeContext);
+  const { topThree, loading, addProduct } = useContext(RecipeContext);
 
   return (
     <>
@@ -49,13 +49,11 @@ function Carousel() {
                 <h3>{topThree[0].name}</h3>
                 <p>Note : {topThree[0].rating}</p>
                 <button
-                  onClick={() =>
-                    window.alert(`Vous avez commandé : ${topThree[0].name}`)
-                  }
+                  onClick={() => addProduct(topThree[0])}
                   type="button"
                   className="btn btn-sm btn-info"
                 >
-                  Commander
+                  Ajouter au panier
                 </button>
               </div>
             </div>
@@ -70,13 +68,11 @@ function Carousel() {
                 <h3>{topThree[1].name}</h3>
                 <p>Note : {topThree[1].rating}</p>
                 <button
-                  onClick={() =>
-                    window.alert(`Vous avez commandé : ${topThree[1].name}`)
-                  }
+                  onClick={() => addProduct(topThree[0])}
                   type="button"
                   className="btn btn-sm btn-info"
                 >
-                  Commander
+                  Ajouter au panier
                 </button>
               </div>
             </div>
@@ -91,13 +87,11 @@ function Carousel() {
                 <h3>{topThree[2].name}</h3>
                 <p>Note : {topThree[2].rating}</p>
                 <button
-                  onClick={() =>
-                    window.alert(`Vous avez commandé : ${topThree[2].name}`)
-                  }
+                  onClick={() => addProduct(topThree[0])}
                   type="button"
                   className="btn btn-sm btn-info"
                 >
-                  Commander
+                  Ajouter au panier
                 </button>
               </div>
             </div>

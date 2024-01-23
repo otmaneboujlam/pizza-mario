@@ -1,4 +1,9 @@
+import { useContext } from "react";
+import { RecipeContext } from "../context/recipes";
+
 function Card({ pizza }) {
+  const { addProduct } = useContext(RecipeContext);
+
   return (
     <div className="card m-1" style={{ width: "18rem" }}>
       <img src={pizza.image} className="card-img-top" alt="" />
@@ -10,11 +15,11 @@ function Card({ pizza }) {
           ))}
         </ul>
         <button
-          onClick={() => window.alert(`Vous avez commandé : ${pizza.name}`)}
+          onClick={() => addProduct(pizza)}
           type="button"
           className="btn btn-sm btn-outline-info"
         >
-          Commander
+          Ajouter au panier
         </button>
       </div>
     </div>

@@ -12,6 +12,7 @@ import HomePage from "./Pages/HomePage";
 import LocalisationPage from "./Pages/LocalisationPage";
 import PresentationPage from "./Pages/PresentationPage";
 import { RecipeProvider } from "./context/recipes";
+import CartPage from "./Pages/CartPage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/Presentation" element={<PresentationPage />} />
             <Route path="/Localisation" element={<LocalisationPage />} />
             <Route path="/Carte" element={<CartePage />} />
+            <Route path="/Cart" element={<CartPage />} />
             <Route path="*" element={<Navigate to="/Home" />} />
           </Routes>
           <Footer />

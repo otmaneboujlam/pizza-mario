@@ -35,6 +35,11 @@ function Nav() {
                 Localisation
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" aria-current="page" to="/Cart">
+                Panier
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
