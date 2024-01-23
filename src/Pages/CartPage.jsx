@@ -30,6 +30,9 @@ function CartPage() {
       </ul>
       <form onSubmit={order}>
         <div className="form-group m-1 p-1">
+          <label htmlFor="address" className="text-white">
+            Address
+          </label>
           <input
             type="text"
             className="form-control"
@@ -37,6 +40,7 @@ function CartPage() {
             name="address"
             aria-describedby="addressHelp"
             placeholder="Enter address"
+            autoComplete="on"
           />
         </div>
         <button type="submit" className="m-2 btn btn-sm btn-success">

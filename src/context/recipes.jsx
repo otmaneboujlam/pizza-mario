@@ -26,7 +26,7 @@ export const RecipeProvider = ({ children }) => {
   const order = (e) => {
     e.preventDefault();
     const address = e.target.address.value.trim();
-    if (address) {
+    if (address && cart.length != 0) {
       window.alert("Votre commande est en préparation");
       redirect("/Home");
       resetCart();

@@ -11,7 +11,7 @@ function HomePage() {
       <h2 className="text-danger">Les mieux notées</h2>
       <Carousel />
       <h2 className="text-danger">Les plus faciles</h2>
-      <div className="d-flex justify-content-around">
+      <div className="d-flex justify-content-center">
         {topThreeEasy.map((p) => (
           <Card key={p.id} pizza={p} />
         ))}
